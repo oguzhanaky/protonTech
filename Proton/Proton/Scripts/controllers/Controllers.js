@@ -1,4 +1,5 @@
 ﻿var app = angular.module('MyApp');
+TEST
 
 app.controller('MainController', ['$scope', 'forecast', function ($scope, forecast) {
     $scope.title = 'This Month\'s Bestsellers';
