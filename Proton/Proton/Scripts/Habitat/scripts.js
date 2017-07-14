@@ -1,6 +1,6 @@
 
 /* Portfolio */
-$(window).load(function() {
+$(window).on('load', function () {
     var $cont = $('.portfolio-group');
     
     $cont.isotope({
@@ -115,6 +115,6 @@ $(function () {
     });
 
 // Sticky Div
-  $(window).load(function(){
+$(window).on('load', function () {
     $("#hornav").sticky({ topSpacing: 0 });
   });

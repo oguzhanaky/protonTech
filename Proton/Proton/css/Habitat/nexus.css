@@ -2334,6 +2334,13 @@ ul.social-icons li a:hover {
 .social-rss a:hover {
   background-color: #fe9900 !important;
 }
+
+.social-myspace a {
+  background: url(../img/social_icons/myspace.png);
+}
+.social-myspace a:hover {
+  background-color: #fe9900 !important;
+}
 [class^="social-"] a,
 [class*=" social-"] a {
   background-position: 8px 7px !important;

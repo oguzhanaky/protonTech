@@ -4,8 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Proton Teknik İnşaat Enerji San. Tic. Ltd. Şti.</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
     <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300" rel="stylesheet" type="text/css">
 
 </head>
@@ -42,7 +40,7 @@
                         <li class="social-facebook">
                             <a href="#" target="_blank" title="Facebook"></a>
                         </li>
-                        <li class="social-googleplus">
+                        <li class="social-myspace">@*social-googleplus*@
                             <a href="#" target="_blank" title="Google+"></a> @*Giriş*@
                         </li>
                     </ul>
@@ -67,19 +65,15 @@
 
         <hr />
         @*navbar-inner  navbar-fixed-bottom*@
-        <footer class="navbar">
-            <!-- === BEGIN FOOTER === -->
-            <div id="base">
+                    <div id="base">
                 <div class="container bottom-border padding-vert-30">
                     <div class="row">
                         <!-- Disclaimer -->
                         <div class="col-md-4">
                             <h3 class="class margin-bottom-10">Disclaimer</h3>
                             <p>All stock images on this template demo are for presentation purposes only, intended to represent a live site and are not included with the template or in any of the Joomla51 club membership plans.</p>
-                            <p>
-                                Most of the images used here are available from
-                                <a href="http://www.shutterstock.com/" target="_blank">shutterstock.com</a>. Links are provided if you wish to purchase them from their copyright owners.
-                            </p>
+                            <p>Most of the images used here are available from
+                                <a href="http://www.shutterstock.com/" target="_blank">shutterstock.com</a>. Links are provided if you wish to purchase them from their copyright owners.</p>
                         </div>
                         <!-- End Disclaimer -->
                         <!-- Contact Details -->
@@ -94,12 +88,10 @@
                                 <span class="fa-link">Website:</span>
                                 <a href="http://www.example.com">www.example.com</a>
                             </p>
-                            <p>
-                                The Dunes, Top Road,
+                            <p>The Dunes, Top Road,
                                 <br>Strandhill,
                                 <br>Co. Sligo,
-                                <br>Ireland
-                            </p>
+                                <br>Ireland</p>
                         </div>
                         <!-- End Contact Details -->
                         <!-- Sample Menu -->
@@ -155,15 +147,16 @@
                     </div>
                 </div>
             </div>
-            <!-- End Footer -->
-        </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
     <script src="@Url.Content("~/Scripts/angular.min.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/angular-route.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-3.1.1.js")"></script>
 
+    <script src="/Scripts/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="/Scripts/modernizr.custom.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/Scripts/bootstrap.js" type="text/javascript"></script>
 
     <!--Habitat Template CSS-->
     <link href="@Url.Content("~/Content/css/Site.css")" rel="stylesheet" type="text/css" />
@@ -174,6 +167,8 @@
     <link href="@Url.Content("~/css/Habitat/nexus.css")" rel="stylesheet" />
     <link href="@Url.Content("~/css/Habitat/responsive.css")" rel="stylesheet" />
     <link href="@Url.Content("~/css/Habitat/style.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/css/FileUpload/style.css")" rel="stylesheet" />
+    
 
     <!--Habitat Template JavaScripts-->
     <script src="@Url.Content("~/Scripts/Habitat/jquery.isotope.js")" type="text/javascript"></script>
@@ -193,6 +188,11 @@
     <!-- Services -->
     <script src="~/Scripts/services/testService.js"></script>
 
+
+
+
+
+    <script src='@Url.Content("~/Scripts/jquery.fileupload.js")' type="text/javascript"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
