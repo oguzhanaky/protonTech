@@ -1,0 +1,59 @@
+﻿<div data-ng-init="ButtonClick()">
+    <div id="body-bg">
+                <!-- === BEGIN CONTENT === -->
+                <div id="content">
+                    <div class="container background-white">
+                        <div class="row margin-vert-30">
+                            <div class="col-md-12">
+                                <h2>{{title}}</h2>
+                                <!-- Filter Buttons -->
+                                <!--<div class="portfolio-filter-container margin-top-20">
+                                    <ul class="portfolio-filter">
+                                        <li class="portfolio-filter-label label label-primary">
+                                            filter by:
+                                        </li>
+                                        <li>
+                                            <a href="#" class="portfolio-selected btn btn-default" data-filter="*">All</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="btn btn-default" data-filter=".code">Coding</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="btn btn-default" data-filter=".design">Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="btn btn-default" data-filter=".audio">Audio</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="btn btn-default" data-filter=".video">Video</a>
+                                        </li>
+                                    </ul>
+                                </div>-->
+                                <!-- End Filter Buttons -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 portfolio-group no-padding">
+                                <!-- Portfolio Item -->
+                                <div class="col-md-4 portfolio-item margin-bottom-60 video" data-ng-repeat="x in projects">
+                                    <div>
+                                        <a href="#">
+                                            <figure>
+                                                <img src="http://www.protonteknik.com/images/slider/slider-1.jpg" alt="image1">
+                                                <figcaption>
+                                                    <h3 class="margin-top-20">{{x.ProjeAdi}}</h3>
+                                                    <span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</span>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- === END CONTENT === -->
+    </div>
+</div>
+
+

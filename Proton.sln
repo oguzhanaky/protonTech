@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proton", "Proton\Proton.csproj", "{32855B11-42C7-403D-9DB0-EE6E703A1D49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtonDb", "ProtonDb\ProtonDb.csproj", "{1B984B84-31C9-4D46-BBDA-90F0B0F8D433}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtonAdmin", "ProtonAdmin\ProtonAdmin.csproj", "{8D689592-96B7-4A5E-8AFF-D7AF633EEC1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32855B11-42C7-403D-9DB0-EE6E703A1D49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32855B11-42C7-403D-9DB0-EE6E703A1D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32855B11-42C7-403D-9DB0-EE6E703A1D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32855B11-42C7-403D-9DB0-EE6E703A1D49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B984B84-31C9-4D46-BBDA-90F0B0F8D433}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B984B84-31C9-4D46-BBDA-90F0B0F8D433}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B984B84-31C9-4D46-BBDA-90F0B0F8D433}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B984B84-31C9-4D46-BBDA-90F0B0F8D433}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D689592-96B7-4A5E-8AFF-D7AF633EEC1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D689592-96B7-4A5E-8AFF-D7AF633EEC1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D689592-96B7-4A5E-8AFF-D7AF633EEC1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D689592-96B7-4A5E-8AFF-D7AF633EEC1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

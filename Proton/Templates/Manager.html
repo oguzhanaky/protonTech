@@ -1,0 +1,156 @@
+﻿<div id="body-bg">
+    <div id="content">
+        <div class="container background-white">
+            <div class="row margin-vert-40">
+                <div class="row tabs">
+                    <div class="col-md-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active">
+                                <a href data-target="#sample-3a" data-toggle="tab">
+                                    <i class="fa fa-home"></i> Hakkımızda</a>
+                            </li>
+                            <li>
+                                <a href data-target="#sample-3b" data-toggle="tab">
+                                    <i class="fa fa-cloud"></i> Tamamlanmış Projeler</a>
+                            </li>
+                            <li>
+                                <a href data-target="#sample-3c" data-toggle="tab">
+                                    <i class="fa fa-comments"></i> Devam Eden Projeler</a>
+                            </li>
+                            <li>
+                                <a href data-target="#sample-3d" data-toggle="tab">
+                                    <i class="fa fa-gear"></i> İletişim</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="sample-3a">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h3 class="no-margin no-padding">Hakkımızda</h3>
+                                        <div>
+                                            <textarea data-ckeditor="options" data-ng-model="content" data-ready="onReady()"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade in" id="sample-3b" data-ng-init="ButtonClick()">
+                                <div class="container background-white">
+                                    <div class="row margin-vert-30">                      
+                                        <div class="col-md-12">
+                                            <h2 class="margin-bottom-10">Tamamlanmış Projeler 
+                                                <button class="pull-right btn btn-primary btn-lg" type="button">
+	                                                <i class="fa fa-plus"></i>
+                                                </button>
+                                            </h2>
+                                            <br>
+<!--                                            <div class="row margin-bottom-30">
+                                                <div class="col-md-3 col-sm-3 col-xs-6 person-details margin-bottom-30" data-ng-repeat="x in projects">
+                                                    <figure>
+                                                        <figcaption>
+                                                            <h3 class="margin-bottom-10">April
+                                                                <small>- {{x.ProjeAdi}}</small>
+                                                            </h3>
+                                                            <h3 class="margin-top-20">Details</h3>
+                                                        </figcaption>
+                                                        <img src="http://www.protonteknik.com/images/slider/slider-1.jpg" alt="image1">
+                                                        <ul class="list-inline person-details-icons">
+                                                            <li>
+                                                                <a data-ng-click="editObject(x)">
+                                                                    <i class="fa-lg fa fa-pencil-square-o"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <i class="fa-lg fa fa-trash-o"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </figure>
+                                                </div>
+                                            </div>-->
+                                            <div id="accordion" class="panel-group alternative">
+                                                <div class="panel panel-default" data-ng-repeat="x in projects">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                            <a class="accordion-toggle" href data-target="#collapse{{x.ProjeId}}" data-parent="#accordion" data-toggle="collapse">
+                                                                {{x.ProjeAdi}}
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse{{x.ProjeId}}" class="accordion-body collapse">
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <img src="http://www.protonteknik.com/images/slider/slider-1.jpg" alt="image1">
+                                                                </div>
+                                                                <div class="col-md-8">
+                                                                    <h3 class="no-margin no-padding">Humanitatis Per Seacula</h3>
+                                                                    <p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus,
+                                                                        qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothicas.</p>
+                                                                    <div class="col-md-12 portfolio-group no-padding">
+                                                                        <div class="col-md-3 portfolio-item margin-bottom-40">
+                                                                            <div>
+                                                                                <a href="#">
+                                                                                    <figure>
+                                                                                        <img src="http://www.protonteknik.com/images/slider/slider-1.jpg" alt="image1">
+                                                                                        <figcaption>
+                                                                                            <h3 class="margin-top-20">Velit</h3>
+                                                                                        </figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-3 portfolio-item margin-bottom-40">
+                                                                            <div>
+                                                                                <a href="#">
+                                                                                    <figure>
+                                                                                        <img src="../assets/img/slider/1.jpg" alt="image1">
+                                                                                        <figcaption>
+                                                                                            <h3 class="margin-top-20">Velit</h3>
+                                                                                        </figcaption>
+                                                                                    </figure>
+                                                                                </a>
+                                                                            </div>                                                 
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade in" id="sample-3c">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <!--  <img src="assets/img/fillers/filler3.jpg" alt="filler image">-->
+                                    </div>
+                                    <div class="col-md-7">
+                                        <h3 class="no-margin no-padding">Mirum Est Notare</h3>
+                                        <p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus,
+                                            qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothicas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade in" id="sample-3d">
+                                <p>Vivamus imperdiet condimentum diam, eget placerat felis consectetur id. Donec eget orci metus, Vivamus imperdiet condimentum diam, eget placerat felis consectetur id. Donec eget orci metus, ac adipiscing nunc.
+                                    Pellentesque fermentum, ante ac interdum ullamcorper. Donec eget orci metus, ac adipiscing nunc. Pellentesque fermentum, consectetur id.</p>
+                                <ul>
+                                    <li>Donec eget orci metus</li>
+                                    <li>Ante ac interdum ullamcorper</li>
+                                    <li>Vivamus imperdiet condimentum</li>
+                                    <li>Pellentesque fermentum</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
