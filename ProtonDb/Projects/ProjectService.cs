@@ -20,5 +20,11 @@ namespace ProtonDb.Projects
             projectList = repo.GetProjects();
             return projectList;
         }
+
+        public static Boolean SaveProject(ProjectModel project)
+        {
+            ProjectRepository repo = new ProjectRepository();
+            return repo.SaveProject(project); 
+        }
     }
 }

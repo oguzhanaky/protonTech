@@ -91,8 +91,56 @@ app.controller('ManagerController', function ($scope, $http, $routeParams) {
             $window.alert(data.Message);
         });
     };
+
     $scope.editObject = function (data) {
         console.log(data);
+    };
+
+    $scope.project = 
+      {
+          name: "",
+          city: "",
+          distinct: "",
+          status: 0,
+          details: "",
+          statusDesc: "Proje Durumu"
+      };
+   
+    $scope.projectStatus = [
+      {
+          completed: 1,
+          desc: "Tamamlandı"
+      },
+      {
+          completed: 0,
+          desc: "Devam Ediyor"
+      }
+    ];
+
+    $scope.setStatus = function (status,desc) {
+        $scope.project.status = status;
+        $scope.project.statusDesc = desc;
+        console.log($scope.project, desc);
+    };
+
+    $scope.saveProject = function () {
+        var post = $http({
+            method: "POST",
+            url: "/Management/SaveProject",
+            dataType: 'json',
+            data: { name: $scope.Name },
+            headers: { "Content-Type": "application/json" }
+        });
+
+        post.success(function (data, status) {
+            $scope.projects = data;
+            console.log(data);
+            //$window.alert("Hello: " + data[0].ProjeAdi + " .\nCurrent Date and Time: " + data.DateTime);
+        });
+
+        post.error(function (data, status) {
+            $window.alert(data.Message);
+        });
     };
 });
 

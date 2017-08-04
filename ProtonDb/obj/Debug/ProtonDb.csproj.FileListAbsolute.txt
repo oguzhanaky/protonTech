@@ -16,3 +16,21 @@ C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\obj\De
 C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\obj\Debug\ProtonDb.csproj.GenerateResource.Cache
 C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\obj\Debug\ProtonDb.dll
 C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\obj\Debug\ProtonDb.pdb
+C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\bin\Debug\ProtonDb.dll.config
+C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\bin\Debug\ProtonDb.dll
+C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\bin\Debug\ProtonDb.pdb
+C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\bin\Debug\EntityFramework.dll
+C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\bin\Debug\System.Configuration.Abstractions.dll
+C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\bin\Debug\EntityFramework.xml
+C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\bin\Debug\System.Configuration.Abstractions.pdb
+C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\obj\Debug\ProtonDb.csprojResolveAssemblyReference.cache
+C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\obj\Debug\ProtonDb.Properties.Resources.resources
+C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\obj\Debug\ProtonDb.csproj.GenerateResource.Cache
+C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\obj\Debug\ProtonDb.dll
+C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\obj\Debug\ProtonDb.pdb

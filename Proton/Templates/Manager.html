@@ -40,10 +40,51 @@
                                     <div class="row margin-vert-30">                      
                                         <div class="col-md-12">
                                             <h2 class="margin-bottom-10">Tamamlanmış Projeler 
-                                                <button class="pull-right btn btn-primary btn-lg" type="button">
-	                                                <i class="fa fa-plus"></i>
+                                                <button class="pull-right btn btn-primary btn-lg" type="button" data-toggle="modal" data-target="#myModal">
+                                                    <i class="fa fa-plus"></i>
                                                 </button>
                                             </h2>
+                                            <!-- Modal -->
+                                            <div id="myModal" class="modal fade" role="dialog">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title">Proje Bilgileri</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <label for="pName"><span class="glyphicon glyphicon-font"></span> Proje Adı</label>
+                                                            <input id="pName"  placeholder="Proje Adı" class="form-control" type="text" data-ng-model="project.name">
+                                                            <br>
+                                                            <label for="pCity"><span class="glyphicon glyphicon-map-marker"></span> Proje İl</label>
+                                                            <input id="pCity" placeholder="Proje İl" class="form-control" type="text" data-ng-model="project.city">
+                                                            <br>
+                                                            <label for="pDistinct"><span class="glyphicon glyphicon-home"></span> Proje İlçe</label>
+                                                            <input id="pDistinct" placeholder="Proje İlçe" class="form-control" type="text" data-ng-model="project.distinct">
+                                                            <br>
+                                                            <label for="pStatus"><span class="glyphicon glyphicon-time"></span> Proje Durumu</label>
+                                                            <div class="dropdown">
+                                                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                                                    {{project.statusDesc}}
+                                                                    <span class="caret"></span>
+                                                                </button>
+                                                                <ul class="dropdown-menu" role="menu" style="background-color: #f0f0f0" >
+                                                                    <li ng-repeat="s in projectStatus">
+                                                                        <a ng-click="setStatus(s.completed,s.desc)">{{s.desc}}</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <br>
+                                                            <label for="projectDetail"><span class="glyphicon glyphicon-pencil"></span> Proje Detay</label>
+                                                            <textarea data-ckeditor="options" data-ng-model="project.detail" data-ready="onReady()"></textarea>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Modal -->
                                             <br>
 <!--                                            <div class="row margin-bottom-30">
                                                 <div class="col-md-3 col-sm-3 col-xs-6 person-details margin-bottom-30" data-ng-repeat="x in projects">

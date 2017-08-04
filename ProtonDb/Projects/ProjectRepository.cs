@@ -35,5 +35,10 @@ namespace ProtonDb.Projects
 
             return projectList;
         }
+
+        public Boolean SaveProject(ProjectModel project)
+        {
+            return true;
+        }
     }
 }
