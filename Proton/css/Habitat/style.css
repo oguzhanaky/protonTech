@@ -3,6 +3,21 @@
 body{
 }
 
+/*Added Manual
+
+.panel-heading {
+    cursor: pointer;
+}
+ .accordion-toggle:after {
+    font-family:'FontAwesome';
+    content:"\f077";
+    float: right;
+    color: inherit;
+}
+.panel-heading.collapsed .accordion-toggle:after {
+    content:"\f078";
+}
+*/
 
 /*text links*/
 .link-style-scope{

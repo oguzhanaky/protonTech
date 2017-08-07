@@ -54,13 +54,13 @@
                                                         </div>
                                                         <div class="modal-body">
                                                             <label for="pName"><span class="glyphicon glyphicon-font"></span> Proje Adı</label>
-                                                            <input id="pName"  placeholder="Proje Adı" class="form-control" type="text" data-ng-model="project.name">
+                                                            <input id="pName" placeholder="Proje Adı" class="form-control" type="text" data-ng-model="project.ProjeAdi">
                                                             <br>
                                                             <label for="pCity"><span class="glyphicon glyphicon-map-marker"></span> Proje İl</label>
-                                                            <input id="pCity" placeholder="Proje İl" class="form-control" type="text" data-ng-model="project.city">
+                                                            <input id="pCity" placeholder="Proje İl" class="form-control" type="text" data-ng-model="project.ProjeSehir">
                                                             <br>
                                                             <label for="pDistinct"><span class="glyphicon glyphicon-home"></span> Proje İlçe</label>
-                                                            <input id="pDistinct" placeholder="Proje İlçe" class="form-control" type="text" data-ng-model="project.distinct">
+                                                            <input id="pDistinct" placeholder="Proje İlçe" class="form-control" type="text" data-ng-model="project.ProjeIlce">
                                                             <br>
                                                             <label for="pStatus"><span class="glyphicon glyphicon-time"></span> Proje Durumu</label>
                                                             <div class="dropdown">
@@ -76,10 +76,13 @@
                                                             </div>
                                                             <br>
                                                             <label for="projectDetail"><span class="glyphicon glyphicon-pencil"></span> Proje Detay</label>
-                                                            <textarea data-ckeditor="options" data-ng-model="project.detail" data-ready="onReady()"></textarea>
+                                                            <textarea data-ckeditor="options" data-ng-model="project.ProjeAciklama" data-ready="onReady()"></textarea>
+                                                            <br>
+                                                            <button type="button" class="btn btn-primary pull-right" data-ng-click="saveProject()">Kaydet</button>
+                                                            <br>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -117,7 +120,10 @@
                                                         <h4 class="panel-title">
                                                             <a class="accordion-toggle" href data-target="#collapse{{x.ProjeId}}" data-parent="#accordion" data-toggle="collapse">
                                                                 {{x.ProjeAdi}}
-                                                            </a>
+                                                                <ul class="list-unstyled pull-right list-inline">
+                                                                    <li><button type="submit" class="btn btn-xs btn-default"><i class="fa fa-edit"></i></button></li>
+                                                                </ul> 
+                                                            </a>     
                                                         </h4>
                                                     </div>
                                                     <div id="collapse{{x.ProjeId}}" class="accordion-body collapse">
@@ -125,6 +131,9 @@
                                                             <div class="row">
                                                                 <div class="col-md-4">
                                                                     <img src="http://www.protonteknik.com/images/slider/slider-1.jpg" alt="image1">
+                                                                    {{x.ProjeSehir}}
+                                                                    <br />
+                                                                    {{x.ProjeIlce}}
                                                                 </div>
                                                                 <div class="col-md-8">
                                                                     <h3 class="no-margin no-padding">Humanitatis Per Seacula</h3>

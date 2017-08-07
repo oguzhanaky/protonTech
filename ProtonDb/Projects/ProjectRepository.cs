@@ -38,7 +38,32 @@ namespace ProtonDb.Projects
 
         public Boolean SaveProject(ProjectModel project)
         {
-            return true;
+            int affectedRows = 0;
+            using (SqlConnection connection = new SqlConnection(CONN))
+            {
+                SqlCommand command = new SqlCommand();
+                command.Connection = connection;
+                command.CommandText = @"INSERT INTO Proje (ProjeAdi, ProjeSehir, ProjeIlce, ProjeDurum, ProjeAciklama) VALUES (@ProjeAdi, @ProjeSehir, @ProjeIlce, @ProjeDurum, @ProjeAciklama)";
+
+                connection.Open();
+                command.Parameters.AddWithValue("@ProjeAdi", project.ProjeAdi);
+                command.Parameters.AddWithValue("@ProjeSehir", project.ProjeSehir);
+                command.Parameters.AddWithValue("@ProjeIlce", project.ProjeIlce);
+                command.Parameters.AddWithValue("@ProjeDurum", project.ProjeDurum);
+                command.Parameters.AddWithValue("@ProjeAciklama", project.ProjeAciklama);
+
+                affectedRows = command.ExecuteNonQuery();
+                connection.Close();
+            }
+
+            if (affectedRows == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

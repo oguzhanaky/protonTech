@@ -98,11 +98,11 @@ app.controller('ManagerController', function ($scope, $http, $routeParams) {
 
     $scope.project = 
       {
-          name: "",
-          city: "",
-          distinct: "",
-          status: 0,
-          details: "",
+          ProjeAdi: "",
+          ProjeSehir: "",
+          ProjeIlce: "",
+          ProjeDurum: 0,
+          ProjeAciklama: "",
           statusDesc: "Proje Durumu"
       };
    
@@ -118,17 +118,17 @@ app.controller('ManagerController', function ($scope, $http, $routeParams) {
     ];
 
     $scope.setStatus = function (status,desc) {
-        $scope.project.status = status;
+        $scope.project.ProjeDurum = status;
         $scope.project.statusDesc = desc;
-        console.log($scope.project, desc);
     };
 
     $scope.saveProject = function () {
+        console.log($scope.project);
         var post = $http({
             method: "POST",
             url: "/Management/SaveProject",
             dataType: 'json',
-            data: { name: $scope.Name },
+            data: { project: $scope.project },
             headers: { "Content-Type": "application/json" }
         });
 
@@ -139,7 +139,7 @@ app.controller('ManagerController', function ($scope, $http, $routeParams) {
         });
 
         post.error(function (data, status) {
-            $window.alert(data.Message);
+            //$window.alert(data.Message);
         });
     };
 });
