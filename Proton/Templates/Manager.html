@@ -120,9 +120,9 @@
                                                         <h4 class="panel-title">
                                                             <a class="accordion-toggle" href data-target="#collapse{{x.ProjeId}}" data-parent="#accordion" data-toggle="collapse">
                                                                 {{x.ProjeAdi}}
-                                                                <ul class="list-unstyled pull-right list-inline">
+                                                                <!--<ul class="list-unstyled pull-right list-inline">
                                                                     <li><button type="submit" class="btn btn-xs btn-default"><i class="fa fa-edit"></i></button></li>
-                                                                </ul> 
+                                                                </ul>--> 
                                                             </a>     
                                                         </h4>
                                                     </div>
@@ -136,9 +136,8 @@
                                                                     {{x.ProjeIlce}}
                                                                 </div>
                                                                 <div class="col-md-8">
-                                                                    <h3 class="no-margin no-padding">Humanitatis Per Seacula</h3>
-                                                                    <p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus,
-                                                                        qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothicas.</p>
+                                                                    <!--<h3 class="no-margin no-padding"></h3>-->
+                                                                    <p>{{x.ProjeAciklama}}</p>
                                                                     <div class="col-md-12 portfolio-group no-padding">
                                                                         <div class="col-md-3 portfolio-item margin-bottom-40">
                                                                             <div>
@@ -165,6 +164,8 @@
                                                                             </div>                                                 
                                                                         </div>
                                                                     </div>
+                                                                    <br />
+                                                                    <button type="button" class="btn btn-primary pull-right" data-ng-click="editProject(x)">Düzenle</button>
                                                                 </div>
                                                             </div>
                                                         </div>

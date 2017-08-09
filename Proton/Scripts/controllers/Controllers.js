@@ -122,6 +122,11 @@ app.controller('ManagerController', function ($scope, $http, $routeParams) {
         $scope.project.statusDesc = desc;
     };
 
+    $scope.editProject = function (project) {
+        console.log(project);
+    };
+    
+
     $scope.saveProject = function () {
         console.log($scope.project);
         var post = $http({
