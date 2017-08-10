@@ -24,8 +24,8 @@ namespace Proton.Controllers
  
                 try
                 {
-                    file.SaveAs(Path.Combine(Server.MapPath("~/UploadedFiles"), fileName));
- 
+                   file.SaveAs(Path.Combine(Server.MapPath("~/UploadedFiles"), fileName));
+                     //file.SaveAs(Path.Combine("http://protondb.somee.com/UploadedFile/", fileName));
                     Message = "File uploaded successfully";
                     flag = true;
 
