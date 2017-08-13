@@ -132,7 +132,6 @@ app.controller('ManagerController', function ($scope, $http, $routeParams, FileU
         console.log($scope.editProjectObject);
     };
     
-
     $scope.saveProject = function () {
         console.log($scope.project);
         var post = $http({
@@ -159,6 +158,7 @@ app.controller('ManagerController', function ($scope, $http, $routeParams, FileU
     $scope.FileInvalidMessage = "";
     $scope.SelectedFileForUpload = null;
     $scope.FileDescription = "";
+    $scope.FileProjectId = "";
     $scope.IsFormSubmitted = false;
     $scope.IsFileValid = false;
     $scope.IsFormValid = false;
@@ -195,12 +195,14 @@ app.controller('ManagerController', function ($scope, $http, $routeParams, FileU
     //----------------------------------------------------------------------------------------
 
     //Save File
-    $scope.SaveFile = function () {
+    $scope.SaveFile = function (projectId) {
+        $scope.FileProjectId = projectId;
+        console.log(projectId);
         $scope.IsFormSubmitted = true;
         $scope.Message = "";
         $scope.ChechFileValid($scope.SelectedFileForUpload);
         if ($scope.IsFormValid && $scope.IsFileValid) {
-            FileUploadService.UploadFile($scope.SelectedFileForUpload, $scope.FileDescription).then(function (d) {
+            FileUploadService.UploadFile($scope.SelectedFileForUpload, $scope.FileProjectId).then(function (d) {
                 alert(d.Message);
                 ClearForm();
             }, function (e) {
@@ -209,7 +211,7 @@ app.controller('ManagerController', function ($scope, $http, $routeParams, FileU
         }
         else {
             $scope.Message = "All the fields are required.";
-            FileUploadService.UploadFile($scope.SelectedFileForUpload, $scope.FileDescription).then(function (d) {
+            FileUploadService.UploadFile($scope.SelectedFileForUpload, $scope.FileProjectId).then(function (d) {
                 alert(d.Message);
                 ClearForm();
             }, function (e) {
@@ -219,7 +221,7 @@ app.controller('ManagerController', function ($scope, $http, $routeParams, FileU
     };
     //Clear form 
     function ClearForm() {
-        $scope.FileDescription = "";
+        $scope.FileProjectId = "";
         //as 2 way binding not support for File input Type so we have to clear in this way
         //you can select based on your requirement
         angular.forEach(angular.element("input[type='file']"), function (inputElem) {
@@ -373,11 +375,11 @@ app.controller('ContactController', function ($scope, FileUploadService) {
 .factory('FileUploadService', function ($http, $q) { // explained abour controller and service in part 2
 
     var fac = {};
-    fac.UploadFile = function (file, description) {
+    fac.UploadFile = function (file, fileProjectId) {
         var formData = new FormData();
         formData.append("file", file);
         //We can send more data to server using append         
-        formData.append("description", description);
+        formData.append("projectId", fileProjectId);
 
         var defer = $q.defer();
         $http.post("/Data/SaveFiles", formData,

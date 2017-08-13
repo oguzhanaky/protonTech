@@ -86,6 +86,9 @@
   <ItemGroup>
     <Compile Include="Administrator\ApplicationUser.cs" />
     <Compile Include="Common\ReflectionHandler.cs" />
+    <Compile Include="DataUpload\DataUploadRepository.cs" />
+    <Compile Include="DataUpload\DataUploadService.cs" />
+    <Compile Include="DataUpload\ProjectPhotoModel.cs" />
     <Compile Include="Membership\ApplicationDbContext.cs" />
     <Compile Include="Common\DbHelper.cs" />
     <Compile Include="Membership\ApplicationRole.cs" />

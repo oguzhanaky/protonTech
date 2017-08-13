@@ -16,3 +16,21 @@ C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\obj\Release\ProtonDb.Prope
 C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\obj\Release\ProtonDb.csproj.GenerateResource.Cache
 C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\obj\Release\ProtonDb.dll
 C:\Users\oguzhan\Documents\GitHub\protonTech\ProtonDb\obj\Release\ProtonDb.pdb
+C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\bin\Release\ProtonDb.dll.config
+C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\bin\Release\ProtonDb.dll
+C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\bin\Release\ProtonDb.pdb
+C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\bin\Release\EntityFramework.dll
+C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\bin\Release\System.Configuration.Abstractions.dll
+C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\bin\Release\EntityFramework.xml
+C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\bin\Release\System.Configuration.Abstractions.pdb
+C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\obj\Release\ProtonDb.csprojResolveAssemblyReference.cache
+C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\obj\Release\ProtonDb.Properties.Resources.resources
+C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\obj\Release\ProtonDb.csproj.GenerateResource.Cache
+C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\obj\Release\ProtonDb.dll
+C:\Users\OGUZHAN-PC\documents\visual studio 2012\Projects\Proton\ProtonDb\obj\Release\ProtonDb.pdb
