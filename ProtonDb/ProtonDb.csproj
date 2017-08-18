@@ -98,6 +98,7 @@
     <Compile Include="Membership\UserLogonModel.cs" />
     <Compile Include="Membership\UserRole.cs" />
     <Compile Include="Projects\ProjectModel.cs" />
+    <Compile Include="Projects\ProjectPhotoModel.cs" />
     <Compile Include="Projects\ProjectRepository.cs" />
     <Compile Include="Projects\ProjectService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

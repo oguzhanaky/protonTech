@@ -65,5 +65,31 @@ namespace ProtonDb.Projects
                 return false;
             }
         }
+
+        public List<ProjectPhotoModel> GetProjectPhotos(int projectId)
+        {
+            List<ProjectPhotoModel> ProjectPhotosList = new List<ProjectPhotoModel>();
+            using (SqlConnection connection = new SqlConnection(CONN))
+            {
+                SqlCommand command = new SqlCommand();
+                command.Connection = connection;
+                command.CommandText = @"SELECT * FROM ProjectPhotos WHERE ProjectId = " + projectId;
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        ProjectPhotoModel projectPhotoModel = new ProjectPhotoModel();
+                        projectPhotoModel.Id = (int)reader["Id"];
+                        projectPhotoModel.FileName = (string)reader["FileName"];
+                        projectPhotoModel.ProjectId = (int)reader["ProjectId"];
+                        projectPhotoModel.IsMainPhoto = (bool)reader["IsMainPhoto"];
+                        ProjectPhotosList.Add(projectPhotoModel);
+                    }         
+                }
+                connection.Close();
+            }
+            return ProjectPhotosList;
+        }
     }
 }

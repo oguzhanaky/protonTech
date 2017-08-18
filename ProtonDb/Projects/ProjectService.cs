@@ -26,5 +26,11 @@ namespace ProtonDb.Projects
             ProjectRepository repo = new ProjectRepository();
             return repo.SaveProject(project); 
         }
+
+        public static List<ProjectPhotoModel> GetProjectPhotos(int projectId)
+        {
+            ProjectRepository repo = new ProjectRepository();
+            return repo.GetProjectPhotos(projectId);
+        }
     }
 }

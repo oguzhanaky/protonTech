@@ -14,5 +14,15 @@ namespace Proton.Controllers
         {
             return ProjectService.SaveProject(project);
         }
+
+
+        [HttpPost]
+        public object GetProjectPhotos(int projectId)
+        {
+            List<ProjectPhotoModel> projectPhotosList = ProjectService.GetProjectPhotos(projectId);
+            System.Web.Script.Serialization.JavaScriptSerializer oSerializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+            return oSerializer.Serialize(projectPhotosList);
+        }
+        
 	}
 }

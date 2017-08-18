@@ -2788,7 +2788,7 @@ ul.posts-list li {
 }
 .person-details-icons {
   background: #555555;
-  padding: 10px;
+  /*padding: 10px;*/
   text-align: center;
   margin: 0;
 }

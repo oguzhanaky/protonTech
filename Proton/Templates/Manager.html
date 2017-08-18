@@ -226,60 +226,67 @@
                                 </ul>
                             </div>
                             <!--Photos-->
-                            <div class="tab-pane fade in" id="sample-3e"> <!--data-ng-init="ButtonClick()"-->
-                                <div class="panel panel-default" data-ng-repeat="y in projects">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a class="accordion-toggle" href data-target="#collapseP{{y.ProjeId}}" data-parent="#accordion" data-toggle="collapse" data-ng-click="GetProjectPhotos(y)">
-                                                {{y.ProjeAdi}}
-                                            </a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapseP{{y.ProjeId}}" class="accordion-body collapse">
-                                        <div class="panel-body">
-                                            <form novalidate name="f1" data-ng-submit="SaveFile(y.ProjeId)">
-                                                <div style="color: red">{{Message}}</div>
-                                                <table>
-                                                    <tr>
-                                                        <td>Dosya Seçiniz : </td>
-                                                        <td>
-                                                            <input type="file" name="file" accept="image" onchange="angular.element(this).scope().selectFileforUpload(this.files)" required />
-                                                            <span class="error" data-ng-show="(f1.file.$dirty || IsFormSubmitted) && f1.file.$error.required">Resim Gerekli !</span>
-                                                            <span class="error">{{FileInvalidMessage}}</span>
-                                                        </td>
-                                                        <td class="pull-right">
-                                                            <input type="submit" value="Upload File" />
-                                                        </td>
-                                                    </tr>
-                                                    <!--<tr>
-                                                        <td>Description : </td>
-                                                        <td>
-                                                            <input type="text" name="uFileDescription" data-ng-model="FileDescription" class="{{(IsFormSubmitted?'ng-dirty' + (f1.uFileDescription.$invalid?' ng-invalid':''):'')}}" autofocus />
-                                                        </td>
-                                                    </tr>-->
-                                                    <tr>
-                                                        <td></td>
-                                                        
-                                                    </tr>
-                                                </table>
-                                            </form>
-                                            <br/>
-                                            <div id="content">
-                                                <div class="container background-white">
-                                                    <div class="row">
-                                                        <div class="col-md-12 portfolio-group no-padding">
-                                                            <!-- Portfolio Item -->
-                                                            <div class="col-md-3 portfolio-item margin-bottom-40 code" data-ng-repeat="w in projectPhotos">
-                                                                <div>
-                                                                    <a href="#">
-                                                                        <figure>
-                                                                            <img src="http://protondb.somee.com/UploadedFiles/{{w.FileName}}" alt="{{w.FileName}}">
-                                                                            <!--<figcaption>
-                                                                                <h3 class="margin-top-20">Velit esse</h3>
-                                                                                <span>Sed ut perspiciatis unde omnis iste natus.</span>
-                                                                            </figcaption>-->
-                                                                        </figure>
-                                                                    </a>
+                            <div class="tab-pane fade in" id="sample-3e">
+                                <!--data-ng-init="ButtonClick()"-->
+                                <div id="accordionP" class="panel-group alternative">
+                                    <div class="panel panel-default" data-ng-repeat="y in projects">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a class="accordion-toggle" href data-target="#collapseP{{y.ProjeId}}" data-parent="#accordionP" data-toggle="collapse" data-ng-click="GetProjectPhotos(y)">
+                                                    {{y.ProjeAdi}}
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseP{{y.ProjeId}}" class="accordion-body collapse">
+                                            <div class="panel-body">
+                                                <form novalidate name="f1" data-ng-submit="SaveFile(y.ProjeId)">
+                                                    <div style="color: red">{{Message}}</div>
+                                                    <table>
+                                                        <tr>
+                                                            <td>Dosya Seçiniz : </td>
+                                                            <td>
+                                                                <input type="file" name="file" accept="image" onchange="angular.element(this).scope().selectFileforUpload(this.files)" required />
+                                                                <span class="error" data-ng-show="(f1.file.$dirty || IsFormSubmitted) && f1.file.$error.required">Resim Gerekli !</span>
+                                                                <span class="error">{{FileInvalidMessage}}</span>
+                                                            </td>
+                                                            <td class="pull-right">
+                                                                <input type="submit" value="Upload File" />
+                                                            </td>
+                                                        </tr>
+                                                        <!--<tr>
+                                                            <td>Description : </td>
+                                                            <td>
+                                                                <input type="text" name="uFileDescription" data-ng-model="FileDescription" class="{{(IsFormSubmitted?'ng-dirty' + (f1.uFileDescription.$invalid?' ng-invalid':''):'')}}" autofocus />
+                                                            </td>
+                                                        </tr>-->
+                                                        <tr>
+                                                            <td></td>
+
+                                                        </tr>
+                                                    </table>
+                                                </form>
+                                                <br />
+                                                <div id="content">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-md-12 portfolio-group no-padding">
+                                                                <!-- Portfolio Item -->
+                                                                <div class="col-md-3 col-sm-3 col-xs-6 person-details margin-bottom-30" data-ng-repeat="w in projectPhotoModel">
+                                                                    <figure>
+                                                                        <img src="http://protondb.somee.com/UploadedFiles/{{w.FileName}}" alt="{{w.FileName}}">
+                                                                        <ul class="list-inline person-details-icons">
+                                                                            <li>
+                                                                                <div class="checkbox">
+                                                                                    <label style="color:#ffffff"><input type="checkbox" checked="{{w.IsMainPhoto}}">VR</label>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
+                                                                                    <i class="fa-lg fa-times"></i>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </figure>
                                                                 </div>
                                                             </div>
                                                         </div>

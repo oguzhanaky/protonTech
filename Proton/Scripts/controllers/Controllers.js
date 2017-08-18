@@ -155,7 +155,24 @@ app.controller('ManagerController', function ($scope, $http, $routeParams, FileU
     };
 
     $scope.GetProjectPhotos = function (projectObj) {
-        console.log(projectObj);
+        console.log(projectObj.ProjeId);
+        var post = $http({
+            method: "POST",
+            url: "/Management/GetProjectPhotos",
+            dataType: 'json',
+            data: { projectId: projectObj.ProjeId },
+            headers: { "Content-Type": "application/json" }
+        });
+
+        post.success(function (data, status) {
+            $scope.projectPhotoModel = data;
+            console.log($scope.projectPhotoModel);
+            //$window.alert("Hello: " + data[0].ProjeAdi + " .\nCurrent Date and Time: " + data.DateTime);
+        });
+
+        post.error(function (data, status) {
+            $window.alert(data.Message);
+        });
     };
 
     //SavePhoto
@@ -179,7 +196,7 @@ app.controller('ManagerController', function ($scope, $http, $routeParams, FileU
     $scope.ChechFileValid = function (file) {
         var isValid = false;
         if ($scope.SelectedFileForUpload != null) {
-            if ((file.type == 'image/png' || file.type == 'image/jpeg' || file.type == 'image/gif') && file.size <= (512 * 1024)) {
+            if ((file.type == 'image/png' || file.type == 'image/jpeg' || file.type == 'image/gif') && file.size <= (512 * 1024) && file.size > 0) {
                 $scope.FileInvalidMessage = "";
                 isValid = true;
             }
