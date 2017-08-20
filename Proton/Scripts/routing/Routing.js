@@ -27,7 +27,7 @@ app.config(['$locationProvider', '$routeProvider',
         templateUrl: '/Templates/CompletedTasks.html'
     })
     .when('/Home/OngoingTasks', {
-        controller: 'CompletedTasksController',
+        controller: 'OnGoingTaskController',
         templateUrl: '/Templates/OngoingTasks.html'
     })
     .when('/Home/Contact', {

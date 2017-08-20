@@ -32,5 +32,23 @@ namespace ProtonDb.Projects
             ProjectRepository repo = new ProjectRepository();
             return repo.GetProjectPhotos(projectId);
         }
+
+        public static List<ProjectModel> GetOnGoingTasks()
+        {
+            ApplicationDbContext db = new ApplicationDbContext();
+            ProjectRepository repo = new ProjectRepository();
+            List<ProjectModel> projectList = new List<ProjectModel>();
+            projectList = repo.GetOnGoingTasks();
+            return projectList;
+        }
+
+        public static List<ProjectModel> GetCompletedProjects()
+        {
+            ApplicationDbContext db = new ApplicationDbContext();
+            ProjectRepository repo = new ProjectRepository();
+            List<ProjectModel> projectList = new List<ProjectModel>();
+            projectList = repo.GetCompletedProjects();
+            return projectList;
+        }
     }
 }

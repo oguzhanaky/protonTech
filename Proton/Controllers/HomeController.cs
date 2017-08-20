@@ -53,5 +53,21 @@ namespace Proton.Controllers
             System.Web.Script.Serialization.JavaScriptSerializer oSerializer = new System.Web.Script.Serialization.JavaScriptSerializer();
             return oSerializer.Serialize(projectList);
         }
+
+        [HttpGet]
+        public object GetCompletedProjects()
+        {
+            List<ProjectModel> projectList = ProjectService.GetCompletedProjects();
+            System.Web.Script.Serialization.JavaScriptSerializer oSerializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+            return oSerializer.Serialize(projectList);
+        }
+
+        [HttpGet]
+        public object GetOnGoingTasks()
+        {
+            List<ProjectModel> projectList = ProjectService.GetOnGoingTasks();
+            System.Web.Script.Serialization.JavaScriptSerializer oSerializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+            return oSerializer.Serialize(projectList);
+        }
 	}
 }

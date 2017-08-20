@@ -90,22 +90,24 @@
                     <!-- End Contact Details -->
                     <!-- Sample Menu -->
                     <div class="col-md-4 margin-bottom-20">
-                        <h3 class="margin-bottom-10">Sample Menu</h3>
-                        <ul class="menu">
-                            <li>
-                                <a class="fa-tasks" href="#">Placerat facer possim</a>
-                            </li>
-                            <li>
-                                <a class="fa-users" href="#">Quam nunc putamus</a>
-                            </li>
-                            <li>
-                                <a class="fa-signal" href="#">Velit esse molestie</a>
-                            </li>
-                            <li>
-                                <a class="fa-coffee" href="#">Nam liber tempor</a>
-                            </li>
-                        </ul>
-                        <div class="clearfix"></div>
+                        <div class="col-sm-12" >
+							<h2>We're Coming Soon</h2>
+							<p>We are working very hard on the new version of our site. It will bring a lot of new features. Stay tuned!</p>
+							<div class="timer" id="clock">
+								<div class="days-wrapper">
+									<span class="days"></span> <br>days
+								</div>
+								<div class="hours-wrapper">
+									<span class="hours"></span> <br>hours
+								</div>
+								<div class="minutes-wrapper">
+									<span class="minutes"></span> <br>minutes
+								</div>
+								<div class="seconds-wrapper">
+									<span class="seconds"></span> <br>seconds
+								</div>
+							</div>
+						</div>
                     </div>
                     <!-- End Sample Menu -->
                 </div>
@@ -146,6 +148,7 @@
     <script src="@Url.Content("~/Scripts/angular.min.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/angular-route.min.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/jquery-3.1.1.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.countdown.min.js")"></script>
     <script src="https://code.angularjs.org/1.2.0/angular-animate.min.js" ></script>
     <script src="https://s3-ap-southeast-1.amazonaws.com/naveensingh/posts_data/ckeditor_example/ng-ckeditor.min.js"></script>
     <script src="@Url.Content("~/Scripts/toastr.min.js")"></script>
@@ -203,6 +206,10 @@
         console.log($('#footinfo').height());
         console.log($('#rb').height());
     }
+
+    $(document).ready(function () {
+        $('div#clock').count('2010/10/10');
+    });
 
     // onDocumentReady function bind
     $(document).ready(function () {

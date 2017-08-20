@@ -1,10 +1,11 @@
-﻿<div data-ng-init="ButtonClick()">
+﻿<div data-ng-init="GetCompletedTasks()">
     <div id="body-bg">
                 <!-- === BEGIN CONTENT === -->
                 <div id="content">
                     <div class="container background-white">
                         <div class="row margin-vert-30">
                             <div class="col-md-12">
+                                <h2>Tamamlanan Projeler</h2>
                                 <h2>{{title}}</h2>
                                 <!-- Filter Buttons -->
                                 <!--<div class="portfolio-filter-container margin-top-20">
@@ -35,7 +36,7 @@
                         <div class="row">
                             <div class="col-md-12 portfolio-group no-padding">
                                 <!-- Portfolio Item -->
-                                <div class="col-md-4 portfolio-item margin-bottom-60 video" data-ng-repeat="x in projects">
+                                <div class="col-md-4 portfolio-item margin-bottom-60 video" data-ng-repeat="x in completedProjects">
                                     <div>
                                         <a href="#">
                                             <figure>
@@ -46,6 +47,9 @@
                                                 </figcaption>
                                             </figure>
                                         </a>
+                                        <h1>
+                                            {{x.ProjeAdi}}
+                                        </h1>                                        
                                     </div>
                                 </div>  
                             </div>

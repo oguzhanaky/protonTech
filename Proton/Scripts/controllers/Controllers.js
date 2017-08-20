@@ -72,7 +72,7 @@ app.controller('ManagerController', function ($scope, $http, $routeParams, FileU
 
     $scope.content = "<p> this is custom directive </p>";
 
-    $scope.ButtonClick = function () {
+    $scope.GetCompletedTasks = function () {
         var post = $http({
             method: "GET",
             url: "/Home/GetProjects",
@@ -309,21 +309,39 @@ app.controller('CkeditorCtrl', function ($scope) {
 });
 
 app.controller('CompletedTasksController', function ($scope, $http, $window) {
-    $scope.ButtonClick = function () {
+    $scope.GetCompletedTasks = function () {
         var post = $http({
             method: "GET",
-            url: "/Home/GetProjects",
+            url: "/Home/GetCompletedProjects",
             dataType: 'json',
-            data: { name: $scope.Name },
             headers: { "Content-Type": "application/json" }
         });
  
         post.success(function (data, status) {
-            $scope.projects = data;
+            $scope.completedProjects = data;
             console.log(data);
-            //$window.alert("Hello: " + data[0].ProjeAdi + " .\nCurrent Date and Time: " + data.DateTime);
         });
  
+        post.error(function (data, status) {
+            $window.alert(data.Message);
+        });
+    }
+});
+
+app.controller('OnGoingTaskController', function ($scope, $http, $window) {
+    $scope.GetOnGoingTasks = function () {
+        var post = $http({
+            method: "GET",
+            url: "/Home/GetOnGoingTasks",
+            dataType: 'json',
+            headers: { "Content-Type": "application/json" }
+        });
+
+        post.success(function (data, status) {
+            $scope.ongoingProjects = data;
+            console.log(data);
+        });
+
         post.error(function (data, status) {
             $window.alert(data.Message);
         });

@@ -1,32 +1,81 @@
-﻿<div class="row">
-    <h2>Part8 - Upload file using Angular JS</h2>
-    <div data-ng-controller="ContactController">
-        <form novalidate name="f1" data-ng-submit="SaveFile()">
-            <div style="color: red">{{Message}}</div>
-            <table>
-                <tr>
-                    <td>Select File : </td>
-                    <td>
-                        <input type="file" name="file" accept="image/*" onchange="angular.element(this).scope().selectFileforUpload(this.files)" required />
-                        <span class="error" data-ng-show="(f1.file.$dirty || IsFormSubmitted) && f1.file.$error.required">Image required!</span>
-                        <span class="error">{{FileInvalidMessage}}</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Description : </td>
-                    <td>
-                        <input type="text" name="uFileDescription" data-ng-model="FileDescription" class="{{(IsFormSubmitted?'ng-dirty' + (f1.uFileDescription.$invalid?' ng-invalid':''):'')}}" autofocus />                   
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <input type="submit" value="Upload File" />
-                    </td>
-                </tr>
-            </table>
- 
-        </form>
+﻿<div data-ng-init="GetCompletedTasks()">
+    <div id="body-bg">
+        <div id="content">
+            <div class="container background-white">
+                <div class="row margin-vert-30">
+                    <!-- Main Column -->
+                    <div class="col-md-7">
+                        <!-- Main Content -->
+                        <div class="headline">
+                            <h2>İletişim Formu</h2>
+                        </div>
+                        <p>Proton Teknik İnşaat Enerji San. Tic. Ltd. Şti.</p>
+                        <!-- Contact Form -->
+                        <form>
+                            <label>İsim</label>
+                            <div class="row margin-bottom-20">
+                                <div class="col-md-9 col-md-offset-0">
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                            <label>Email
+                                <span class="color-red">*</span>
+                            </label>
+                            <div class="row margin-bottom-20">
+                                <div class="col-md-9 col-md-offset-0">
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                            <label>Mesaj</label>
+                            <div class="row margin-bottom-20">
+                                <div class="col-md-9 col-md-offset-0">
+                                    <textarea rows="6" class="col-md-12 form-control" style="resize: none;"></textarea>
+                                </div>
+                            </div>
+                            <p>
+                                <button type="submit" class="btn btn-primary">Gönder</button>
+                            </p>
+                        </form>
+                        <!-- End Contact Form -->
+                        <!-- End Main Content -->
+                    </div>
+                    <!-- End Main Column -->
+                    <!-- Side Column -->
+                    <div class="col-md-5">
+                        <!-- Recent Posts -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">İletişim Bilgileri</h3>
+                            </div>
+                            <div class="panel-body">
+                                <p>Proton Teknik İnşaat Enerji San. Tic. Ltd. Şti. Adres: Yenisahra Yavuz Selim Caddesi Bozoklar İş Mrk. No:23 K: 1. D: 2 Ataşehir / İstanbul</p>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <i class="fa-phone color-primary"></i>0 (216) 565 52 54</li>
+                                    <li>
+                                        <i class="fa-print color-primary"></i>0 (216) 565 84 82</li>
+                                    <li>
+                                        <i class="fa-envelope color-primary"></i>proton@protonteknik.com</li>
+                                    <li>
+                                        <i class="fa-home color-primary"></i>www.protonteknik.com</li>
+                                </ul>
+                                <!--<ul class="list-unstyled">
+                                    <li>
+                                        <strong class="color-primary">Monday-Friday:</strong>9am to 6pm</li>
+                                    <li>
+                                        <strong class="color-primary">Saturday:</strong>10am to 3pm</li>
+                                    <li>
+                                        <strong class="color-primary">Sunday:</strong>Closed</li>
+                                </ul>-->
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.778812609471!2d29.090180915413402!3d40.98632397930311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf3067b1c118758b8!2sProton+Teknik+%C4%B0n%C5%9Faat!5e0!3m2!1str!2s!4v1487253321503" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                            </div>
+                        </div>
+                        <!-- End recent Posts -->
+                    </div>
+                    <!-- End Side Column -->
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
